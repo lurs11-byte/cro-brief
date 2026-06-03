@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Intelligence Brief — June 3, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0ede8;
+    color: #111;
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: #111;
+    color: white;
+    padding: 44px 0 32px;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+  .header .topics {
+    font-size: 15px;
+    color: #aaa;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* ── Signal bar ── */
+  .signal-bar {
+    background: #1c1c1c;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    letter-spacing: 0.3px;
+  }
+  .signal-bar .highlight { color: #e8a020; font-weight: 700; }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── Section wrapper ── */
+  .section {
+    background: white;
+    border-radius: 14px;
+    padding: 32px 36px;
+    margin: 24px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .section > h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 26px;
+    color: #000;
+  }
+
+  /* ── Author chip ── */
+  .author-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f3ef;
+    border-radius: 20px;
+    padding: 3px 10px 3px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #111;
+    margin-right: 6px;
+  }
+  .author-chip .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #c97a00;
+    flex-shrink: 0;
+  }
+
+  /* ── Source type badge ── */
+  .source-type {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+  }
+  .src-linkedin  { background: #e8f0fb; color: #0a66c2; }
+  .src-newsletter { background: #fef3e2; color: #b45309; }
+  .src-podcast   { background: #f3e8ff; color: #7c3aed; }
+  .src-blog      { background: #ecfdf5; color: #065f46; }
+  .src-twitter   { background: #e7f5fd; color: #0284c7; }
+
+  /* ── Signal badge ── */
+  .signal-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+  .sig-high   { background: #fff3cd; color: #92400e; }
+  .sig-medium { background: #d1fae5; color: #065f46; }
+  .sig-low    { background: #f1f5f9; color: #64748b; }
+
+  /* ── Executive Summary items ── */
+  .exec-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .exec-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .exec-num {
+    font-size: 32px;
+    font-weight: 900;
+    color: #e8e2d8;
+    line-height: 1;
+    min-width: 32px;
+    padding-top: 4px;
+  }
+  .exec-content {}
+  .exec-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .exec-content strong {
+    display: block;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: #000;
+  }
+  .exec-content p {
+    font-size: 15px;
+    color: #111;
+    line-height: 1.7;
+  }
+
+  /* ── Article items ── */
+  .article {
+    padding: 24px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .article:last-child { border-bottom: none; padding-bottom: 0; }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .article h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    color: #000;
+  }
+  .article ul {
+    margin: 12px 0 12px 20px;
+  }
+  .article ul li {
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  .article .why-block {
+    background: #f9f7f4;
+    border-left: 3px solid #c97a00;
+    padding: 12px 16px;
+    margin-top: 14px;
+    border-radius: 0 6px 6px 0;
+  }
+  .article .why-block .why-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c97a00;
+    margin-bottom: 6px;
+  }
+  .article .why-block p {
+    font-size: 14px;
+    color: #111;
+    line-height: 1.65;
+  }
+  .article a.read-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c97a00;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Deep Dive ── */
+  .deepdive-item {
+    background: #faf8f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+    border: 1px solid #ece8e0;
+  }
+  .deepdive-item h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; color: #111; }
+  .deepdive-item .dd-meta {
+    display: flex; gap: 12px; margin-bottom: 10px;
+    font-size: 12px; color: #222;
+  }
+  .deepdive-item .dd-meta span { font-weight: 600; }
+  .deepdive-item p { font-size: 14px; color: #111; line-height: 1.6; }
+
+  /* ── Comment ── */
+  .comment-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .comment-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .comment-item .comment-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .comment-item .post-summary { font-size: 14px; color: #111; margin-bottom: 12px; line-height: 1.6; }
+  .comment-item .why-comment { font-size: 13px; color: #222; margin-bottom: 10px; }
+  .comment-item .angle-block {
+    background: #f0f7ff;
+    border-left: 3px solid #0a66c2;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+  }
+  .comment-item .angle-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #0a66c2; margin-bottom: 4px;
+  }
+  .comment-item .angle-block p { font-size: 13px; color: #111; line-height: 1.55; }
+
+  /* ── LinkedIn Post ── */
+  .post-idea {
+    background: #faf8f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+    border: 1px solid #ece8e0;
+  }
+  .post-idea h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; color: #111; }
+  .post-idea .pi-row { font-size: 13px; color: #111; margin-bottom: 6px; }
+  .post-idea .pi-row strong { color: #111; }
+
+  /* ── Themes ── */
+  .theme-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #f3f0eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .theme-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .theme-item .theme-body { flex: 1; }
+  .theme-item h3 { font-size: 15px; font-weight: 800; color: #111; margin-bottom: 6px; }
+  .theme-item .evidence { font-size: 13px; color: #111; margin-bottom: 6px; }
+  .theme-item .why { font-size: 13px; color: #222; }
+
+  /* ── Contrarian ── */
+  .contrarian-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .contrarian-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .contrarian-item .views {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+  }
+  .view-box {
+    background: #f9f7f4;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .view-box .view-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 6px; color: #555;
+  }
+  .view-box.contrarian .view-label { color: #c97a00; }
+  .view-box p { font-size: 13px; color: #111; line-height: 1.5; }
+  .contrarian-item .assessment {
+    font-size: 13px; color: #111; line-height: 1.6;
+    background: #fffbf5;
+    border-radius: 8px; padding: 12px 14px;
+  }
+  .contrarian-item .assessment strong { color: #111; }
+
+  /* ── Test ideas ── */
+  .test-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .test-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .test-item h3 { font-size: 15px; font-weight: 800; margin-bottom: 6px; color: #111; }
+  .test-item p { font-size: 14px; color: #111; line-height: 1.6; }
+  .test-item .hypothesis {
+    margin-top: 8px; font-size: 13px; color: #222;
+    font-style: italic;
+  }
+
+  /* ── Disagree ── */
+  .disagree-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f0eb;
+  }
+  .disagree-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .disagree-item h3 { font-size: 15px; font-weight: 800; margin-bottom: 6px; color: #111; }
+  .disagree-item .known-view {
+    font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 4px;
+  }
+  .disagree-item p { font-size: 14px; color: #111; line-height: 1.6; margin-bottom: 8px; }
+  .disagree-item .challenge {
+    background: #fff8f0;
+    border-left: 3px solid #e8a020;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 13px; color: #111; line-height: 1.55;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 32px 0 16px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Daily CRO Brief &nbsp;·&nbsp; June 3, 2026</h1>
+  <div class="topics">CRO &nbsp;·&nbsp; Growth &nbsp;·&nbsp; Product &nbsp;·&nbsp; Experimentation</div>
+</div>
+<div class="signal-bar">
+  Signal quality today: <span class="highlight">Medium-High</span> &nbsp;·&nbsp; 10 experts searched &nbsp;·&nbsp; 6 items passed filter &nbsp;·&nbsp; ~7 min read
+</div>
+
+<div class="container">
+
+  <!-- Section 1: Executive Summary -->
+  <div class="section">
+    <div class="section-label">Section 1</div>
+    <h2>Executive Summary</h2>
+
+    <div class="exec-item">
+      <div class="exec-num">1</div>
+      <div class="exec-content">
+        <strong>CRO scope is expanding beyond the page</strong>
+        <div class="exec-meta">
+          <span class="author-chip"><span class="dot"></span>Talia Wolf</span>
+          <span class="source-type src-linkedin">LinkedIn</span>
+          <span style="font-size:12px;color:#bbb">May 2026</span>
+        </div>
+        <p>Wolf argues that page-level optimization is now table stakes. The highest-leverage work happens across the full customer journey — ads, emails, onboarding, and what AI systems say about your brand before anyone clicks. If your team lives in landing pages and checkout flows, you're optimizing the second impression, not the first.</p>
+      </div>
+    </div>
+
+    <div class="exec-item">
+      <div class="exec-num">2</div>
+      <div class="exec-content">
+        <strong>Messaging is the cause. Conversion is just the effect.</strong>
+        <div class="exec-meta">
+          <span class="author-chip"><span class="dot"></span>Peep Laja</span>
+          <span class="source-type src-linkedin">LinkedIn</span>
+          <span style="font-size:12px;color:#bbb">17 hours ago</span>
+        </div>
+        <p>Five-component messaging framework published today: clarity, relevance, value, differentiation, friction reduction. Each is testable separately. Laja's argument — 80% of conversion happens when messaging is clear, relevant, and differentiated. Most teams skip this entirely and go straight to page mechanics.</p>
+      </div>
+    </div>
+
+    <div class="exec-item">
+      <div class="exec-num">3</div>
+      <div class="exec-content">
+        <strong>60–70% of traditional growth playbooks are now obsolete</strong>
+        <div class="exec-meta">
+          <span class="author-chip"><span class="dot"></span>Elena Verna</span>
+          <span class="source-type src-podcast">Podcast</span>
+          <span class="source-type src-newsletter">Newsletter</span>
+          <span style="font-size:12px;color:#bbb">Lenny's</span>
+        </div>
+        <p>Verna — operating Lovable at $400M ARR — says most of what she learned in 15 years of growth doesn't apply anymore. Feature differentiation is commoditized. Experience and emotional connection are the moat. Shipping velocity beats optimization cadence. Direct pressure on the experimentation-first assumption.</p>
+      </div>
+    </div>
+
+    <div class="exec-item">
+      <div class="exec-num">4</div>
+      <div class="exec-content">
+        <strong>Zero-click world forces pre-landing optimization</strong>
+        <div class="exec-meta">
+          <span class="author-chip"><span class="dot"></span>Talia Wolf</span>
+          <span class="source-type src-linkedin">LinkedIn</span>
+          <span style="font-size:12px;color:#bbb">May 26, 2026</span>
+        </div>
+        <p>Most organic search traffic no longer clicks through. Users form intent from AI summaries, featured snippets, and social previews — arriving on your page with a pre-formed opinion. If that's true, optimizing the first scroll is optimizing the second impression. The real first impression is now upstream.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Everything Worth Reading -->
+  <div class="section">
+    <div class="section-label">Section 2</div>
+    <h2>Everything Worth Reading</h2>
+
+    <div class="article">
+      <div class="article-meta">
+        <span class="author-chip"><span class="dot"></span>Peep Laja</span>
+        <span class="source-type src-linkedin">LinkedIn</span>
+        <span class="signal-badge sig-high">High</span>
+        <span style="font-size:12px;color:#bbb;margin-left:4px">17 hours ago · live engagement window</span>
+      </div>
+      <h3>Messaging Is the Cause. Conversion Is the Effect.</h3>
+      <ul>
+        <li>Sign-up, demo request, purchase — these are effects, not causes. Messaging drives them.</li>
+        <li>Framework: measure messaging across 5 separate components — clarity, relevance, value proposition, differentiation, and friction reduction.</li>
+        <li>Back-to-back message testing reveals which specific component is breaking conversion — not just that conversion is broken.</li>
+        <li>Primary research is non-negotiable: you can't write resonant messaging without knowing your buyer's exact language.</li>
+      </ul>
+      <div class="why-block">
+        <div class="why-label">Why it matters</div>
+        <p>This is the most structured framework for hypothesis-first copy testing published this week. Breaking messaging into 5 independently testable components means you can identify where the problem is, not just that one version beats another. Directly applicable to A/B test design.</p>
+      </div>
+      <a href="#" class="read-link">→ View on LinkedIn</a>
+    </div>
+
+    <div class="article">
+      <div class="article-meta">
+        <span class="author-chip"><span class="dot"></span>Talia Wolf</span>
+        <span class="source-type src-linkedin">LinkedIn</span>
+        <span class="signal-badge sig-high">High</span>
+        <span style="font-size:12px;color:#bbb;margin-left:4px">May 4, 2026 · 98 reactions</span>
+      </div>
+      <h3>The New CRO Strategy: How to Optimize Everywhere Across the Entire Customer Journey</h3>
+      <ul>
+        <li>Page optimization is now the floor, not the ceiling. The real leverage is across the full journey.</li>
+        <li>CRO must extend to ads, emails, onboarding flows, and content — not just conversion pages.</li>
+        <li>Research and emotional audit must happen before any test is designed. Most teams skip both.</li>
+        <li>Every touchpoint is a conversion event — not just the form or the checkout.</li>
+      </ul>
+      <div class="why-block">
+        <div class="why-label">Why it matters</div>
+        <p>Challenges the entire scope of how CRO engagements are typically structured. If journey-level optimization is now the job, then test prioritization, research frameworks, and success metrics all need revisiting. Forces a re-audit of where the biggest leverage actually sits.</p>
+      </div>
+      <a href="#" class="read-link">→ View on LinkedIn</a>
+    </div>
+
+    <div class="article">
+      <div class="article-meta">
+        <span class="author-chip"><span class="dot"></span>Elena Verna</span>
+        <span class="source-type src-podcast">Podcast</span>
+        <span class="source-type src-newsletter">Newsletter</span>
+        <span class="signal-badge sig-high">High</span>
+        <span style="font-size:12px;color:#bbb;margin-left:4px">Lenny's · Stripe Sessions 2026</span>
+      </div>
+      <h3>The New AI Growth Playbook: Inside Lovable's $400M ARR in 14 Months</h3>
+      <ul>
+        <li>60–70% of what Verna learned in 15 years of growth does not transfer to Lovable.</li>
+        <li>Feature differentiation is commoditized — anyone can rebuild your capabilities. Experience and emotional connection are the moat.</li>
+        <li>Shipping velocity is the #1 team value. PMF is a constantly moving target — monthly, not annually.</li>
+        <li>Pricing was changed 10 times in one year — usage-based, new models, live experiments with customers.</li>
+        <li>Free tier became the most powerful acquisition lever, not a cost center.</li>
+      </ul>
+      <div class="why-block">
+        <div class="why-label">Why it matters</div>
+        <p>This is not a theoretical framework — it's an operator's live report from a company growing $100M/month. The specific claim that feature utility is commoditized has direct implications for what CRO teams should be optimizing for: not features, but emotional resonance and experience quality.</p>
+      </div>
+      <a href="#" class="read-link">→ Read on Lenny's Newsletter</a>
+    </div>
+  </div>
+
+  <!-- Section 3: Deep Dives -->
+  <div class="section">
+    <div class="section-label">Section 3</div>
+    <h2>Deep Dive Opportunities</h2>
+
+    <div class="deepdive-item">
+      <div class="article-meta" style="margin-bottom:8px">
+        <span class="author-chip"><span class="dot"></span>Talia Wolf</span>
+        <span class="source-type src-linkedin">LinkedIn</span>
+      </div>
+      <h3>The New CRO Strategy — Full Journey Optimization</h3>
+      <div class="dd-meta">
+        <span>⏱ <span>20 min read + 10 min mapping</span></span>
+        <span>📈 <span>High expected value</span></span>
+      </div>
+      <p>Directly challenges the scope of CRO work. If the argument holds, your highest-leverage experiments are upstream of the page — and most of your current test backlog is optimizing the wrong layer. Worth reading alongside your current client/product scope and mapping which tests would shift priority.</p>
+    </div>
+
+    <div class="deepdive-item">
+      <div class="article-meta" style="margin-bottom:8px">
+        <span class="author-chip"><span class="dot"></span>Elena Verna</span>
+        <span class="source-type src-podcast">Podcast</span>
+      </div>
+      <h3>Lovable's Pricing as Growth Strategy — Stripe Sessions 2026</h3>
+      <div class="dd-meta">
+        <span>⏱ <span>45 min listen or 15 min written summary</span></span>
+        <span>📈 <span>High expected value</span></span>
+      </div>
+      <p>10 pricing changes in one year. Usage-based models tested live with customers. This is monetization experimentation at a cadence that makes most SaaS pricing look static. Directly applicable to any PLG product thinking about pricing as a conversion optimization surface.</p>
+    </div>
+  </div>
+
+  <!-- Section 4: Comment Opportunities -->
+  <div class="section">
+    <div class="section-label">Section 4</div>
+    <h2>Comment Opportunities</h2>
+
+    <div class="comment-item">
+      <div class="comment-meta">
+        <span class="author-chip"><span class="dot"></span>Peep Laja</span>
+        <span class="source-type src-linkedin">LinkedIn</span>
+        <span style="font-size:12px;color:#bbb">17 hours ago · high engagement window</span>
+      </div>
+      <div class="post-summary">Published the 5-component messaging framework today. High-visibility post attracting practitioners and senior ICs. Currently in active engagement window.</div>
+      <div class="why-comment">The framework is strong but stops before sequencing. Which component is highest-leverage at different funnel stages? That's the missing layer.</div>
+      <div class="angle-block">
+        <div class="angle-label">Suggested Angle</div>
+        <p>Add a prioritization question from your test database. Which of the five components breaks most often at first-scroll vs. bottom funnel? That's a unique, data-backed contribution no one else in the thread can make.</p>
+      </div>
+    </div>
+
+    <div class="comment-item">
+      <div class="comment-meta">
+        <span class="author-chip"><span class="dot"></span>Talia Wolf</span>
+        <span class="source-type src-linkedin">LinkedIn</span>
+        <span style="font-size:12px;color:#bbb">May 4 · 98 reactions · still active</span>
+      </div>
+      <div class="post-summary">Full-journey CRO post. Making the argument that page-level optimization is no longer where the leverage is. Strong engagement from practitioners.</div>
+      <div class="why-comment">The argument raises a resource allocation problem: if you can optimize everywhere, where do you start? That's the practical gap the post doesn't address.</div>
+      <div class="angle-block">
+        <div class="angle-label">Suggested Angle</div>
+        <p>Add the practitioner's lens: the challenge is sequencing, not scope. What signal or data point should trigger moving beyond the page? A framework for prioritization, not just permission to expand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: LinkedIn Post Ideas -->
+  <div class="section">
+    <div class="section-label">Section 5</div>
+    <h2>LinkedIn Post Opportunities</h2>
+
+    <div class="post-idea">
+      <h3>The funnel doesn't start on your page anymore</h3>
+      <div class="pi-row"><strong>Why now:</strong> Talia Wolf's zero-click post + Peep's AEO data both dropped this week. The conversation is live.</div>
+      <div class="pi-row"><strong>Angle:</strong> "We spent 15 years optimizing pages. The decision to click was already made upstream." What does it mean when the copy in your AI search snippet is now the real landing page?</div>
+      <div class="pi-row"><strong>Sources:</strong> Talia Wolf, Peep Laja (Wynter Index Q2 2026)</div>
+    </div>
+
+    <div class="post-idea">
+      <h3>Messaging has 5 components. Most teams optimize for zero of them.</h3>
+      <div class="pi-row"><strong>Why now:</strong> Peep Laja's framework is live and generating engagement. The gap between teams that test messaging systematically and those that don't is widening.</div>
+      <div class="pi-row"><strong>Angle:</strong> From 2,500+ tests — which of the five components breaks the most experiments? Lead with the finding, not the framework.</div>
+      <div class="pi-row"><strong>Sources:</strong> Peep Laja</div>
+    </div>
+
+    <div class="post-idea">
+      <h3>The experiment you should run before you run the experiment</h3>
+      <div class="pi-row"><strong>Why now:</strong> Multiple practitioners pushing the same idea: most teams skip the judgment layer and jump to execution.</div>
+      <div class="pi-row"><strong>Angle:</strong> Before you build the test, name the behavioral assumption you're testing. Not the metric. Not the variant. The assumption. Most teams can't do it.</div>
+      <div class="pi-row"><strong>Sources:</strong> Shreyas Doshi, Teresa Torres</div>
+    </div>
+  </div>
+
+  <!-- Section 6: Themes -->
+  <div class="section">
+    <div class="section-label">Section 6</div>
+    <h2>Emerging Themes</h2>
+
+    <div class="theme-item">
+      <div class="theme-body">
+        <h3>CRO is being redefined as full-journey optimization</h3>
+        <div class="evidence">Talia Wolf (2 posts), Elena Verna (Lenny's podcast), Brian Balfour (Four Fits update)</div>
+        <div class="why">Multiple practitioners from different disciplines landing on the same conclusion independently. The CRO role is expanding. Page-level practitioners who don't adapt scope will be outcompeted.</div>
+      </div>
+      <span class="signal-badge sig-high" style="margin-top:4px;flex-shrink:0">High</span>
+    </div>
+
+    <div class="theme-item">
+      <div class="theme-body">
+        <h3>Messaging quality is the primary growth lever, not traffic or page mechanics</h3>
+        <div class="evidence">Peep Laja (3 posts in 2 weeks), Wynter Index Q2 2026 data</div>
+        <div class="why">Consistent, research-backed argument across multiple posts and live index data. Laja is building a persistent case that conversion problems are messaging problems in disguise.</div>
+      </div>
+      <span class="signal-badge sig-high" style="margin-top:4px;flex-shrink:0">High</span>
+    </div>
+
+    <div class="theme-item">
+      <div class="theme-body">
+        <h3>Qualitative research over quant data for hypothesis generation</h3>
+        <div class="evidence">Peep Laja ("primary research is still king"), Talia Wolf (emotional audit before testing)</div>
+        <div class="why">Both practitioners argue that teams skip to testing before understanding the customer — meaning the test hypotheses are wrong from the start. Counter-signal to analytics-first test ideation.</div>
+      </div>
+      <span class="signal-badge sig-medium" style="margin-top:4px;flex-shrink:0">Medium</span>
+    </div>
+  </div>
+
+  <!-- Section 7: Contrarian -->
+  <div class="section">
+    <div class="section-label">Section 7</div>
+    <h2>Contrarian Opinions</h2>
+
+    <div class="contrarian-item">
+      <div class="article-meta" style="margin-bottom:12px">
+        <span class="author-chip"><span class="dot"></span>Elena Verna</span>
+      </div>
+      <div class="views">
+        <div class="view-box">
+          <div class="view-label">Conventional view</div>
+          <p>A/B test everything. Optimize relentlessly. Improve what exists through measured iteration.</p>
+        </div>
+        <div class="view-box contrarian">
+          <div class="view-label">Contrarian view</div>
+          <p>For AI-era companies, innovation over optimization. Shipping velocity beats A/B testing cadence. PMF is a moving target — optimize for discovery, not conversion.</p>
+        </div>
+      </div>
+      <div class="assessment"><strong>Assessment:</strong> Partially convincing. Compelling for category-creation companies building new markets. Less applicable for established products with known funnels. The risk: using "innovation over optimization" as an excuse to avoid measurement discipline. Verna herself is explicit that this is a foundation-laying phase — not an abandonment of rigor.</div>
+    </div>
+
+    <div class="contrarian-item">
+      <div class="article-meta" style="margin-bottom:12px">
+        <span class="author-chip"><span class="dot"></span>Peep Laja</span>
+      </div>
+      <div class="views">
+        <div class="view-box">
+          <div class="view-label">Conventional view</div>
+          <p>Test multiple message variants to find the winner, then iterate from there.</p>
+        </div>
+        <div class="view-box contrarian">
+          <div class="view-label">Contrarian view</div>
+          <p>Repeat yourself obsessively. When you're sick of hearing your own message, it's just starting to get through. Most companies abandon good messages before they saturate.</p>
+        </div>
+      </div>
+      <div class="assessment"><strong>Assessment:</strong> Convincing — but operating at a different level. Laja is talking about brand message consistency over time and across channels, not single-page A/B testing. These aren't mutually exclusive. The real insight: testing variation before establishing a consistent baseline is a sequencing mistake, not a testing mistake.</div>
+    </div>
+  </div>
+
+  <!-- Section 8: Test Ideas -->
+  <div class="section">
+    <div class="section-label">Section 8</div>
+    <h2>Ideas Worth Testing</h2>
+
+    <div class="test-item">
+      <h3>Five-Component Messaging Audit → Sequential Copy Tests</h3>
+      <p>Instead of running a single copy A/B test, run five sequential tests — each isolating one component (clarity / relevance / value / differentiation / friction). Identify which dimension is lowest-scoring first via qualitative panel or session review, then test specifically against that gap.</p>
+      <div class="hypothesis">Hypothesis: targeted single-component tests produce larger lifts than omnibus copy rewrites, because they fix the actual problem rather than guessing at it.</div>
+    </div>
+
+    <div class="test-item">
+      <h3>Zero-Click Pre-Landing Impression Test</h3>
+      <p>Test whether optimizing the meta description / search snippet / social preview card changes both CTR and post-landing conversion rate. Align snippet messaging with page hero — same emotional hook, same promise, no gap between pre-click expectation and on-page delivery.</p>
+      <div class="hypothesis">Hypothesis: eliminating the expectation gap reduces bounce and increases scroll depth more than any on-page variant.</div>
+    </div>
+
+    <div class="test-item">
+      <h3>Journey-Level vs. Page-Level Optimization — Parallel Tracks</h3>
+      <p>Run two parallel tracks: (A) optimize the landing page in isolation, (B) optimize the full journey from first ad/email touch to activation. Measure not just signup rate but activation-to-paid conversion 14 days later.</p>
+      <div class="hypothesis">Hypothesis: journey-level optimization produces higher LTV impact per test than page-level optimization, even if the signup rate lift is smaller.</div>
+    </div>
+  </div>
+
+  <!-- Section 9: Disagree -->
+  <div class="section">
+    <div class="section-label">Section 9</div>
+    <h2>What You Might Disagree With</h2>
+
+    <div class="disagree-item">
+      <div class="known-view">Your view: First scroll is the highest-leverage point</div>
+      <h3>The first scroll may no longer be the first impression</h3>
+      <p>Talia Wolf's zero-click argument: most organic traffic now forms intent before landing. AI summaries, social previews, and search snippets are the real first impression.</p>
+      <div class="challenge">The uncomfortable question: if the first scroll is the second impression for a growing portion of your traffic, then your highest-leverage test may be a snippet rewrite or an AI-summary optimization — not a hero section variant. The thesis may still hold for direct/paid traffic, but needs a traffic-source modifier for organic.</div>
+    </div>
+
+    <div class="disagree-item">
+      <div class="known-view">Your view: Experimentation-first, data-informed</div>
+      <h3>At what product velocity does A/B testing become a liability?</h3>
+      <p>Elena Verna argues that for fast-moving AI products, shipping velocity beats optimization cadence. PMF is a moving target. Running tests on a product that changes monthly means you're optimizing local maxima.</p>
+      <div class="challenge">The real challenge: your experimentation system may be optimized for stable products with known funnels. If the product changes faster than the test cycle, what does responsible experimentation look like? The answer isn't to stop testing — it's to test at a higher altitude: the assumption layer, not the execution layer.</div>
+    </div>
+
+    <div class="disagree-item">
+      <div class="known-view">Your view: Analytics-first for hypothesis generation</div>
+      <h3>Qualitative research may be the higher-leverage input for test ideation</h3>
+      <p>Both Peep Laja and Talia Wolf argue that most test hypotheses are wrong from the start — because teams identify where people drop off (quant) without understanding why (qual).</p>
+      <div class="challenge">If your test ideation pipeline is driven primarily by heatmaps, funnels, and session recordings, you're identifying friction points without understanding the emotional or messaging gap underneath them. The result: tests that optimize mechanics, not resonance — and those tests tend to produce lower impact per experiment.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Generated June 3, 2026 &nbsp;·&nbsp; 10 experts searched &nbsp;·&nbsp; RSS + Web search &nbsp;·&nbsp; israel@lurs.com
+</div>
+
+</body>
+</html>
