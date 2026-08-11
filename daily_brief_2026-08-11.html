@@ -1,0 +1,337 @@
+<html><body><pre>{
+  "signal_quality": "High",
+  "experts_searched": 8,
+  "items_passed_filter": 12,
+  "executive_summary": [
+    {
+      "headline": "AI Economics Flips CRO Incentives—Strategy Over Small Tweaks Now Wins",
+      "author": "Ton Wesseling / CXL",
+      "source_type": "Expert insight",
+      "date": "2026-03-11",
+      "why": "Core shift: when AI automates testing, cost goes to zero, making strategy-level work the bottleneck instead of execution. This inverts traditional CRO ROI math."
+    },
+    {
+      "headline": "Growth Innovation Outpaces Optimization 95%-5% at Hypergrowth Stage",
+      "author": "Elena Verna (Lovable)",
+      "source_type": "Expert narrative",
+      "date": "2026-04-11",
+      "why": "Lovable hit $200M ARR in <1 year. Verna threw out 60-70% of her 15-year playbook. Traditional retention tactics don't transfer to AI-native products. Innovation velocity became the retention strategy."
+    },
+    {
+      "headline": "Statsig Acquisition Signals Consolidation—Amplitude Now Owns Experimentation Code Without Team",
+      "author": "Amplitude / OpenAI",
+      "source_type": "Company move",
+      "date": "2026-05-05",
+      "why": "OpenAI acquired Statsig for $1.1B in Sept 2025; Amplitude took the platform + customers in May 2026 while engineering team stayed at OpenAI. Existential question for Statsig customers on product roadmap continuity."
+    },
+    {
+      "headline": "Shreyas Doshi on Product Decisions: Exceptional Skill Cannot Be Replaced by Process",
+      "author": "Shreyas Doshi",
+      "source_type": "Expert essay",
+      "date": "2026-01-19",
+      "why": "Pushes back on belief that frameworks + discipline = exceptional PMs. Argues talent gap is real; discipline compensates only for average talent. Reframes how to think about hiring and mentoring product leaders."
+    },
+    {
+      "headline": "Talia Wolf Frames CRO as Zero-Click World Problem—Page Optimization No Longer Sufficient",
+      "author": "Talia Wolf (Getuplift)",
+      "source_type": "Expert narrative",
+      "date": "2026-05-26",
+      "why": "Buyers form opinions on Reddit, Discord, YouTube before visiting your site. Optimizing owned pages is necessary but no longer sufficient. Shifts CRO scope from page-level to buyer research and messaging alignment."
+    },
+    {
+      "headline": "Optimizely Launches AI-First DXP Strategy—Wins Gartner Magic Quadrant Leadership",
+      "author": "Optimizely",
+      "source_type": "Company move",
+      "date": "2026-06-04",
+      "why": "Opal (AI assistant) now drives experiment prioritization, AI variation generation, and multi-armed bandits with contextual reallocation. Platform now frames CMS as marketing infrastructure for AI agents, not publishers."
+    }
+  ],
+  "articles": [
+    {
+      "title": "How AI Will Reshape CRO Economics—Automation Lowers Cost to Zero",
+      "author": "Ton Wesseling & Hesh Fekry (CXL)",
+      "source_type": "Expert webinar / blog",
+      "signal": "High",
+      "date": "2026-03-11",
+      "bullets": [
+        "For companies where experimentation doesn't pay today, AI lowers labor cost → tests run near-zero incremental cost",
+        "When cost barrier drops, strategy-level work (not execution) becomes the constraint",
+        "Faster iteration + compounding learnings = new economic model for CRO programs"
+      ],
+      "why": "Directly challenges Israel's observation that 'most tests should fail by design'—if cost → zero, failure economics change entirely. Teams will run more volume, but win rate may matter less than learning velocity.",
+      "url": "https://cxl.com/blog/ai-and-conversion-rate-optimization-strategy/",
+      "client_implication": "Your testing infrastructure needs to support 10x test volume. The bottleneck shifts from 'can we afford to test?' to 'do we have a coherent hypothesis framework?' Quality of learning system becomes existential.",
+      "test_opportunity": "Measure time-to-hypothesis vs. time-to-launch across your current test backlog. If hypothesis refinement takes longer than running the test, your learning system is the constraint, not your tool.",
+      "content_opportunity": "Create a playbook: 'When Test Cost → Zero, What Actually Matters?' (hypothesis rigor, metric design, velocity discipline)"
+    },
+    {
+      "title": "The New Growth Playbook: 95% Innovation, 5% Optimization at Hypergrowth",
+      "author": "Elena Verna (Lovable)",
+      "source_type": "Expert narrative / case study",
+      "signal": "High",
+      "date": "2026-04-11",
+      "bullets": [
+        "Lovable hit $100M ARR in 7 months, $200M in under a year. Only 30-40% of traditional growth tactics transferred.",
+        "Shipping velocity became the retention strategy—product constantly evolving beats polish",
+        "Verna invests 95% of time in new loops, 5% optimizing existing ones (inverse of traditional SaaS playbook)"
+      ],
+      "why": "Elena is challenging the assumption that optimization compounds. In fast-moving AI-native categories, novelty and perceived momentum matter more than funnel efficiency. This inverts Israel's 'iteration creates most value' principle in one specific context: when your product is commoditizable.",
+      "url": "https://www.growthtalent.org/insights/elena-verna-on-why-95-of-growth-is-now-innovation-not-optimization",
+      "client_implication": "If you're in a category where competitors can clone your product in weeks, optimization ROI plummets. Your testing should measure feature adoption velocity and retention impact of shipping cadence, not micro-conversions.",
+      "test_opportunity": "Run an experiment: A/B test shipping frequency (weekly vs. bi-weekly feature drops) against retention cohorts. Measure if users stay longer when product feels 'alive' vs. static.",
+      "content_opportunity": "Playbook: 'Testing in Commoditizable Categories—When Novelty Beats Optimization'"
+    },
+    {
+      "title": "Zero-Click World Forces CRO to Expand Beyond Page Optimization",
+      "author": "Talia Wolf (Getuplift)",
+      "source_type": "Expert essay / LinkedIn",
+      "signal": "Medium-High",
+      "date": "2026-05-26",
+      "bullets": [
+        "Buyers decide before they visit your site—Reddit, YouTube, Discord conversations are where opinions form",
+        "Optimizing landing pages + checkout flows is necessary but insufficient",
+        "New CRO strategy: understand sentiment/messaging across unowned channels, then reflect that into owned experiences"
+      ],
+      "why": "Aligns with Israel's 'traffic intent matters' view but extends it upstream. Not about first scroll; about pre-arrival positioning. Reframes what 'customer research' means for a CRO.",
+      "url": "https://www.linkedin.com/in/taliagw",
+      "client_implication": "Your A/B testing should validate messaging that already resonates in customer conversations (not test messaging inside a vacuum). Audit Reddit, Discord, product reviews first. Test only variations that map to observed sentiment.",
+      "test_opportunity": "Scrape customer feedback (Reddit, Trustpilot, Discord) for the top 5 objection themes. Run tests on copy/messaging that directly addresses those objections vs. your current control. Measure if addressing observed objections lifts conversion.",
+      "content_opportunity": "Research report: 'The CRO Research Gap—What Your Page Says vs. What Customers Are Saying'"
+    },
+    {
+      "title": "Statsig Acquisition by Amplitude—What It Means for Customers and Competitors",
+      "author": "Optimizely / Convert",
+      "source_type": "Company analysis",
+      "signal": "High",
+      "date": "2026-05-06",
+      "bullets": [
+        "OpenAI acquired Statsig (Sept 2025, $1.1B). Engineering team stayed at OpenAI.",
+        "Amplitude took brand, platform, customer base (May 2026). Amplitude now owns code without original builders.",
+        "Risk: innovation velocity slows; support capability questioned. Statsig customers face unclear roadmap."
+      ],
+      "why": "Signals consolidation in experimentation space. VWO + AB Tasty merged earlier (Jan 2026). Category is consolidating into fewer, larger platforms. Matters for Israel because it affects vendor strategy.",
+      "url": "https://www.convert.com/blog/a-b-testing/statsig-moves-to-amplitude/",
+      "client_implication": "If you're on Statsig: evaluate migration risk. If you're selecting a platform: Optimizely and Amplitude are now the two dominant narrative-setters. Statsig's technical purity is at risk if Amplitude deprioritizes it against Experiment.",
+      "test_opportunity": "Compare Statsig's recent feature velocity vs. Amplitude Experiment's roadmap. Run a POC on both platforms with identical test design; measure setup ease, analysis depth, time-to-insight.",
+      "content_opportunity": "Vendor comparison: 'Statsig vs. Amplitude Experiment in 2026—What Changed Since the Acquisition'"
+    },
+    {
+      "title": "Product Sense Trumps Process—Shreyas Doshi on Why Frameworks Can't Replace Talent",
+      "author": "Shreyas Doshi",
+      "source_type": "Expert essay",
+      "signal": "Medium-High",
+      "date": "2026-01-19",
+      "bullets": [
+        "Exceptional talent has intuition; average talent + discipline compensates. But there's no shortcut to talent.",
+        "Product teams that complain 'PM doesn't have enough influence' often lack product sense, not authority",
+        "Two-way door thinking: spend time on high-reversibility decisions; move fast on low-reversibility ones"
+      ],
+      "why": "Challenges the assumption that better frameworks = better decisions. Suggests Israel's 'testing built on losing first' approach requires actual judgment about what matters, not just process discipline.",
+      "url": "https://www.linkedin.com/in/shreyasdoshi/",
+      "client_implication": "Your experimentation framework is only as good as the people interpreting the results. If your team can't distinguish noise from signal, or can't pick the right metric to optimize, more tests → more false confidence. Invest in judgment training, not just tool training.",
+      "test_opportunity": "Audit your last 20 tests: how many were run because leadership believed in the hypothesis vs. because you had a testing tool? Measure learning quality by post-test decision changes (not just stat sig wins).",
+      "content_opportunity": "Training module: 'Building Product Judgment for Experimenters—When Not to Trust the Dashboard'"
+    },
+    {
+      "title": "Optimizely Opal: AI-Driven Experiment Prioritization & Variation Generation",
+      "author": "Optimizely",
+      "source_type": "Company product release",
+      "signal": "High",
+      "date": "2026-06-04",
+      "bullets": [
+        "Opal now prioritizes experimentation backlog automatically; generates experiment ideas based on page + goals",
+        "AI Variation Agent modifies/creates website elements and applies enhancement suggestions while maintaining brand consistency",
+        "Contextual multi-armed bandits (CMABs) dynamically reallocate traffic per user segment; balance exploration/exploitation faster than traditional A/B"
+      ],
+      "why": "Directly impacts Israel's framing of 'iteration velocity matters most.' Optimizely is automating ideation and variation generation. If tooling can generate ideas, the bottleneck shifts to hypothesis clarity and outcome interpretation.",
+      "url": "https://www.optimizely.com/insights/whats-new-in-optimizely-opal-june-4-2026/",
+      "client_implication": "Experiment ideation is becoming tool-driven. Your competitive advantage shifts to: (1) having clear metrics that matter, (2) knowing which customer segments to optimize for, (3) interpreting results in business context. Tactics generation is commoditizing.",
+      "test_opportunity": "Compare time-to-launch for tests generated by Opal vs. manually brainstormed. Measure quality by win rate and business impact (not just velocity). Does AI-generated variation outperform human-designed variation?",
+      "content_opportunity": "Framework: 'The Post-AI Experimentation Stack—What Humans Should Still Do'"
+    },
+    {
+      "title": "Amplitude Statsig Integration & Wave System: From Insight to Shipped in One Loop",
+      "author": "Amplitude",
+      "source_type": "Company announcement",
+      "signal": "Medium-High",
+      "date": "2026-08-05",
+      "bullets": [
+        "Wave: AI system that surfaces evidence-backed product opportunities from analytics + replays + feedback + experiments, with priority score and execution plan",
+        "Agent Analytics: measure AI agent quality at scale, trace failures to root cause, connect to business outcomes",
+        "Model Context Protocol (MCP): brings Amplitude insights into Claude, Cursor, Slack, Figma—no context switching"
+      ],
+      "why": "Amplitude is closing the loop from 'insight detected' → 'change shipped' → 'impact measured.' This compounds Israel's 'learning system matters more than individual test quality' principle but automates the system.",
+      "url": "https://investors.amplitude.com/news-releases/news-release-details/amplitude-announces-second-quarter-2026-financial-results",
+      "client_implication": "Analytics platforms are now shipping full learning loop automation. If you're building on Amplitude, your competitive edge comes from (1) knowing which insights to action, (2) deciding speed vs. rigor tradeoffs, (3) interpreting agent recommendations. The platform is doing the heavy lifting.",
+      "test_opportunity": "Compare time-from-insight-to-shipped using Wave vs. manual prioritization. Measure if automatically prioritized ideas have higher impact than human-picked ones. Are they running more tests or better tests?",
+      "content_opportunity": "Analysis: 'Does AI-Driven Prioritization Improve Test Quality? A Comparative Study'"
+    }
+  ],
+  "emerging_signals": [
+    {
+      "signal": "Cost-to-Test → Zero Triggers Strategy Rethink",
+      "supporting_sources": [
+        "Ton Wesseling / CXL (AI automation lowers cost)",
+        "Optimizely Opal (automatic ideation + variation generation)",
+        "Statsig MCP integration (API-first testing)"
+      ],
+      "confidence": "High",
+      "why_matters": "When the cost barrier collapses, CRO teams face a choice: run 10x more tests with same insight quality, or run same volume with 10x better hypothesis rigor. This isn't a tool problem; it's a learning system design problem. Teams without disciplined prioritization will drown in false positives.",
+      "suggested_action": "Audit your test ideation process. If AI can generate variations faster than you can, focus investment on: (1) metric clarity, (2) hypothesis discipline, (3) learning synthesis across tests (not individual test wins). Build a 'learning dashboard' that tracks cross-test patterns, not just p-values."
+    },
+    {
+      "signal": "AI-Native Product Categories Break Traditional Growth Playbooks",
+      "supporting_sources": [
+        "Elena Verna on Lovable hypergrowth (95% innovation vs. 5% optimization)",
+        "Optimizely on conversational discovery displacing clicks",
+        "Brian Balfour's Four Fits updated for AI era"
+      ],
+      "confidence": "High",
+      "why_matters": "If your product can be cloned in weeks (as in AI app builder space), retention optimization loses leverage. Perceived momentum (shipping velocity, constant feature evolution) becomes the retention strategy. This inverts conventional wisdom about optimization ROI.",
+      "suggested_action": "Segment your user base by 'commoditization risk.' If high: measure feature adoption velocity and retention impact of shipping cadence, not funnel micro-conversions. If low: optimize as usual. Don't apply Elena's playbook to defensible products."
+    },
+    {
+      "signal": "Experimentation Category Consolidating—Vendor Choice Narrowing",
+      "supporting_sources": [
+        "Statsig → Amplitude (May 2026)",
+        "VWO + AB Tasty merge (Jan 2026)",
+        "Optimizely dominates Gartner DXP ranking; Opal adoption 42% QoQ growth"
+      ],
+      "confidence": "High",
+      "why_matters": "Two dominant platforms emerging (Amplitude + Optimizely). Statsig's fate uncertain post-acquisition. If you're on a smaller platform, migration risk is real. If you're evaluating, ecosystem effects favor the two leaders.",
+      "suggested_action": "If on Statsig: run a POC on Amplitude Experiment + Wave. Evaluate migration cost vs. staying. If evaluating: benchmark Amplitude Experiment + Wave against Optimizely Opal on: setup time, hypothesis support, result interpretation quality, and learning across multiple tests."
+    },
+    {
+      "signal": "CRO Scope Expanding Upstream—Page Optimization No Longer Sufficient",
+      "supporting_sources": [
+        "Talia Wolf zero-click buyer research (Reddit/Discord/YouTube form opinions pre-visit)",
+        "Amplitude Wave (bringing feedback into experimentation loop)",
+        "Optimizely on conversational AI search changing discovery"
+      ],
+      "confidence": "Medium-High",
+      "why_matters": "Traditional CRO (landing page → conversion) assumes you've solved messaging + positioning upstream. New evidence suggests most CRO teams never validate positioning against actual customer conversations. Testing in a vacuum means optimizing the wrong baseline.",
+      "suggested_action": "Before running your next test, audit customer feedback (Reddit, Trustpilot, Discord) for top objection themes. If your test doesn't address an observed objection, don't run it. Measure if addressing observed sentiment lifts conversion vs. generic variations."
+    },
+    {
+      "signal": "AI Agents Drive 25% of Analytics Queries—Judgment Gap Widens",
+      "supporting_sources": [
+        "Amplitude AI Agents (25% of queries now AI-driven)",
+        "Optimizely Opal (automatic test prioritization, idea generation)",
+        "Shreyas Doshi (exceptional judgment can't be replaced by process)"
+      ],
+      "confidence": "Medium-High",
+      "why_matters": "When AI can analyze faster than humans, the question 'is this insight real?' becomes harder. False positives multiply. Teams without strong judgment will see throughput increase but impact decrease. This is a skills gap, not a tool problem.",
+      "suggested_action": "Train your team on: distinguishing noise from signal in high-volume testing environments, understanding when agent recommendations are reasonable vs. suspicious, and building mental models of your user base that resist automation. Judgment is now a competitive edge."
+    }
+  ],
+  "what_changed": [
+    {
+      "observation": "Cost Curve of Experimentation Shifted Dramatically",
+      "trend_direction": "Down and to the right",
+      "evidence": "Ton Wesseling: 'Automated experimentation lowers human labor costs. More tests can be run at near-zero incremental cost.' Optimizely Opal now generates variations automatically. Statsig MCP enables API-first testing.",
+      "implication": "Teams can run 10x test volume without proportional budget increase. This inverts traditional CRO ROI models. The bottleneck moves from 'can we run this test?' to 'should we run this test?' Hypothesis discipline becomes the constraint, not execution."
+    },
+    {
+      "observation": "Growth Strategy Inverts for Hypergrowth / Commoditizable Categories",
+      "trend_direction": "From optimization-first to innovation-first",
+      "evidence": "Elena Verna at Lovable: 'I'm spending 95% of my time inventing new growth loops instead of optimizing old ones. Only 30-40% of what I learned in 15 years transferred.' VWO + AB Tasty merger signals consolidation; new entrants must differentiate on velocity, not conversion rate.",
+      "implication": "Traditional SaaS playbook (funnel optimization → compound improvements) doesn't scale in AI-native categories. Shipping velocity and perceived momentum matter more. Testing should measure 'does this feature change retention trajectory?' not 'does this button color work?'"
+    },
+    {
+      "observation": "Vendor Consolidation Accelerates in Experimentation Space",
+      "trend_direction": "Toward oligopoly (Amplitude + Optimizely dominant)",
+      "evidence": "Statsig acquisition chain (OpenAI → Amplitude, May 2026). VWO + AB Tasty merger (Jan 2026). Optimizely's Gartner DXP leadership + 42% QoQ Opal growth.",
+      "implication": "Smaller players losing positioning. Platform choice increasingly binary. Ecosystem effects favor leaders. If on Statsig or smaller platform, migration risk real. Innovation increasingly concentrated at two vendors."
+    },
+    {
+      "observation": "CRO Scope Boundaries Shifting Upstream",
+      "trend_direction": "From page-level to buyer research & positioning",
+      "evidence": "Talia Wolf: 'Your buyers have already made up their mind before visiting your site.' Focus shifting to Reddit, Discord, YouTube conversations. Optimizely integrating feedback + analytics + experiments into Wave loop.",
+      "implication": "Testing in isolation (landing page A/B tests without positioning validation) is increasingly suboptimal. CRO teams must own or influence messaging research upstream. Success metrics shift from 'conversion rate' to 'messaging-market fit.'"
+    },
+    {
+      "observation": "PM Judgment Paradox Sharpens as Tooling Improves",
+      "trend_direction": "Tool capability up; judgment gaps wider",
+      "evidence": "Shreyas Doshi: 'Exceptional talent has intuition; there's no shortcut.' Amplitude AI agents drive 25% of queries. Optimizely auto-generates experiment ideas. More tooling → lower barrier to run tests → more false positives without judgment.",
+      "implication": "Skill gaps widen, not narrow. Teams with strong judgment pull ahead. Teams that follow AI recommendations blindly fall further behind. This is a people problem, not a tool problem."
+    }
+  ],
+  "themes": [
+    {
+      "theme": "Automation Flips Economics; Strategy Becomes the Bottleneck",
+      "evidence": "Ton Wesseling on cost→zero, Optimizely Opal automatic ideation, Amplitude Wave auto-prioritization",
+      "why": "When tooling can run tests faster and cheaper, the constraint shifts from execution to hypothesis clarity and outcome interpretation. Teams will get faster, but most won't get smarter—leading to high volume, low impact testing.",
+      "signal": "Vendors pushing automation hard, but expert commentary (Shreyas, Ton, Talia) emphasizes judgment and strategy, not tooling. Clear tension between 'more tests faster' and 'better tests.' Israel's instinct ('learning system matters') is becoming the competitive edge."
+    },
+    {
+      "theme": "Hypergrowth in AI-Native Categories Requires Fundamentally Different Playbook",
+      "evidence": "Elena Verna's 95-5 innovation-optimization split at Lovable, Optimizely on conversational discovery, Brian Balfour's Four Fits AI update",
+      "why": "When product commoditization risk is high, retention optimization loses leverage. Perceived momentum, shipping velocity, and product evolution become the actual retention strategy. This breaks traditional SaaS CRO wisdom.",
+      "signal": "Elena explicitly states '60-70% of traditional growth knowledge didn't transfer.' This is not a minor tactical shift; it's a fundamental strategy inversion for a specific category. Clients in high-commoditization categories need a different playbook."
+    },
+    {
+      "theme": "CRO Expanding Into Pre-Purchase Research & Positioning Validation",
+      "evidence": "Talia Wolf on zero-click buyer opinions, Amplitude Wave bringing feedback into testing loop, conversion research moving upstream",
+      "why": "Traditional CRO assumes positioning and messaging are already correct, then optimizes page-level tactics. New evidence (Talia's Reddit/Discord/YouTube insights) suggests most CRO teams optimize the wrong baseline. Scope expansion necessary.",
+      "signal": "Talia's narrative is gaining traction. Implies CRO teams need new skills: customer research, sentiment analysis, messaging testing. Aligns with Israel's 'traffic intent (social vs. search) is critical' view but extends it further upstream."
+    },
+    {
+      "theme": "Platform Consolidation Creating Ecosystem Gravity Around Leaders",
+      "evidence": "Statsig→Amplitude, VWO+AB Tasty merge, Optimizely's Gartner positioning, Amplitude + Statsig integration",
+      "why": "Larger platforms can absorb smaller ones, integrate deeper, and create switching costs. Innovation and feature velocity increasingly concentrated. Smaller vendors lose narrative control and customer access.",
+      "signal": "This is a structural shift, not cyclical. Expect continued consolidation. Vendor choice will narrow further. Matters for Israel's clients on platform selection strategy."
+    },
+    {
+      "theme": "Judgment Becomes More Valuable as Tooling Commoditizes Execution",
+      "evidence": "Shreyas Doshi on talent vs. process, Amplitude 25% AI-driven queries, Ton Wesseling on strategy vs. automation",
+      "why": "When any team can run tests (cost→zero) and AI can generate ideas + prioritize, the question 'is this the right test to run?' becomes the constraint. Judgment (reading context, interpreting results, avoiding false positives) is the moat.",
+      "signal": "Experts universally emphasizing judgment while vendors push automation. This tension will define 2026-2027. Teams investing in judgment training will outperform those buying better tools."
+    }
+  ],
+  "company_signals": [
+    {
+      "company": "Amplitude",
+      "signal": "Statsig acquisition complete; Wave system + Agent Analytics launched; MCP integration across Claude, Cursor, Slack, Figma; Q2 2026 revenue raised guidance to $407-411M (vs. prior $397-403M)",
+      "significance": "High",
+      "why_it_matters": "Amplitude now owns the full learning loop: behavioral analytics → insight generation (Wave) → execution + measurement (Statsig). MCP integration means insights flow into developer workflow without context switching. 42% QoQ Opal growth + Statsig integration positions Amplitude as the 'full stack analytics + experimentation' leader.",
+      "url": "https://investors.amplitude.com/news-releases/news-release-details/amplitude-announces-second-quarter-2026-financial-results"
+    },
+    {
+      "company": "Optimizely",
+      "signal": "Opal (AI assistant) now auto-prioritizes experimentation backlog, generates experiment ideas from page context, powers CMABs with dynamic traffic reallocation; MCP server enables Claude/Cursor/GitHub Copilot/Windsurf integration; 42% QoQ Opal growth; 1,700 customers on Opal including Salesforce, Zoom; displaced Adobe in Gartner DXP Magic Quadrant (early 2025), earned Leader in Personalization Engines (2026)",
+      "significance": "High",
+      "why_it_matters": "Optimizely is framing experimentation as part of a broader 'CMS-as-marketing-infrastructure-for-AI-agents' vision. Automation + AI-first positioning, combined with strong Gartner positioning and enterprise traction, makes it the narrative leader for 'AI-first DXP.' Testing is being subsumed into larger platform story.",
+      "url": "https://www.optimizely.com/insights/whats-new-in-optimizely-opal-june-4-2026/"
+    },
+    {
+      "company": "Statsig",
+      "signal": "OpenAI acquired Sept 2025 for $1.1B; Amplitude took brand + platform + customers (May 2026); original engineering team stayed at OpenAI; Statsig continues product development under Amplitude stewardship with MCP support, warehouse-native approach, advanced statistical methods",
+      "significance": "High",
+      "why_it_matters": "Existential question for Statsig customers: will Amplitude prioritize Statsig roadmap vs. Amplitude Experiment? Early signals: Statsig MCP updates continue, Amplitude integrating Statsig into Wave. But code ownership without original builders is a medium-term risk. Customers should monitor for innovation velocity slowdown.",
+      "url": "https://www.convert.com/blog/a-b-testing/statsig-moves-to-amplitude/"
+    },
+    {
+      "company": "VWO",
+      "signal": "Merged with AB Tasty (Jan 2026, under Everstone Capital); combined platform now $100M+ ARR with 4,000+ customers; integration of VWO's optimization expertise + AB Tasty's experimentation capabilities",
+      "significance": "Medium",
+      "why_it_matters": "Third major consolidation play in experimentation space. VWO + AB Tasty merger creates a unified 'optimization + testing' platform. Smaller than Amplitude/Optimizely but credible #3 player. Suggests category will settle into 2-3 dominant platforms.",
+      "url": "https://www.convert.com/blog/a-b-testing/statsig-moves-to-amplitude/"
+    }
+  ],
+  "disagree": [
+    {
+      "israel_view": "Win rate is a poor KPI—impact per test matters more",
+      "challenge_title": "Impact Becomes Harder to Measure When Test Volume Explodes",
+      "challenge": "Ton Wesseling & Optimizely argue AI will enable near-infinite test capacity. When you run 10x more tests, measuring 'impact per test' becomes noisier. You'll have more winners (by sheer volume) but harder to distinguish signal from noise. Win rate might actually become a more useful filter—'how many of these AI-generated tests are real wins vs. false positives?'",
+      "aligns": "Partially. Israel is correct that impact matters more than win rate. But he assumes a fixed test budget/volume. If volume becomes unconstrained, the measurement problem inverts.",
+      "challenges": "If you can't trust individual test results (because you're running so many), how do you know which winning tests actually drove business value? This is an empirical question Amplitude's Wave and Optimizely's Opal are trying to answer with post-hoc analysis.",
+      "genuinely_new": "The unconstrained volume scenario creates a measurement problem Israel's framing doesn't fully address. When test cost→zero, the question shifts from 'is this test worth running?' to 'are these results real?'"
+    },
+    {
+      "israel_view": "First scroll is the highest-leverage area on most pages",
+      "challenge_title": "Zero-Click World Makes Pre-Scroll Decision-Making Upstream",
+      "challenge": "Talia Wolf argues buyers form opinions on Reddit, Discord, YouTube before visiting your site. If true, then the first scroll is optimizing someone who's already decided (or not). The highest-leverage area is positioning + messaging validation upstream (not on your page).",
+      "aligns": "Israel's principle is correct: focus on the highest-leverage area. But Talia suggests the leverage has moved off your page entirely.",
+      "challenges": "This reframes the entire scope of CRO. If pre-arrival positioning is the bottleneck, then testing landing page elements is defensive, not offensive. It changes where Israel should tell clients to invest.",
+      "genuinely_new": "The upstream shift is real and significant. It's not a contradiction of Israel's principle; it's a reframing of where the principle applies. First scroll still matters, but only after you've validated positioning in unowned channels."
+    }</pre></body></html>
